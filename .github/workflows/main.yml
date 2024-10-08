@@ -18,9 +18,9 @@ jobs:
     - name: Set up Xcode
       run: sudo xcode-select -s /Applications/Xcode_15.2.app
 
-    # Step 3: Build the iOS app using the .xcodeproj file
+    # Step 3: Build the iOS app using the .xcodeproj file and allow provisioning updates
     - name: Build iOS App
-      run: xcodebuild -project TestCI/TestCI.xcodeproj -scheme TestCI -sdk iphoneos -configuration Release archive -archivePath $PWD/build/TestCI.xcarchive
+      run: xcodebuild -project TestCI/TestCI.xcodeproj -scheme TestCI -sdk iphoneos -configuration Release archive -archivePath $PWD/build/TestCI.xcarchive --allowProvisioningUpdates
 
     # Step 4: Export the IPA file
     - name: Export IPA
