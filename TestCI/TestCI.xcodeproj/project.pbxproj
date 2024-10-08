@@ -16,6 +16,7 @@
 		A2DCFE242CB51C19000ABFBE /* TestCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DCFE232CB51C19000ABFBE /* TestCITests.swift */; };
 		A2DCFE2E2CB51C19000ABFBE /* TestCIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DCFE2D2CB51C19000ABFBE /* TestCIUITests.swift */; };
 		A2DCFE302CB51C19000ABFBE /* TestCIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DCFE2F2CB51C19000ABFBE /* TestCIUITestsLaunchTests.swift */; };
+		A2DCFE3D2CB5282C000ABFBE /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2DCFE3C2CB5282C000ABFBE /* exportOptions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A2DCFE292CB51C19000ABFBE /* TestCIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DCFE2D2CB51C19000ABFBE /* TestCIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCIUITests.swift; sourceTree = "<group>"; };
 		A2DCFE2F2CB51C19000ABFBE /* TestCIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A2DCFE3C2CB5282C000ABFBE /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				A2DCFE152CB51C18000ABFBE /* Assets.xcassets */,
 				A2DCFE172CB51C18000ABFBE /* LaunchScreen.storyboard */,
 				A2DCFE1A2CB51C18000ABFBE /* Info.plist */,
+				A2DCFE3C2CB5282C000ABFBE /* exportOptions.plist */,
 			);
 			path = TestCI;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				A2DCFE192CB51C18000ABFBE /* LaunchScreen.storyboard in Resources */,
 				A2DCFE162CB51C18000ABFBE /* Assets.xcassets in Resources */,
 				A2DCFE142CB51C17000ABFBE /* Main.storyboard in Resources */,
+				A2DCFE3D2CB5282C000ABFBE /* exportOptions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,9 +445,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V9XJF83JKV;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestCI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -471,9 +475,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V9XJF83JKV;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestCI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
