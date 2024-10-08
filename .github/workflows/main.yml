@@ -14,23 +14,27 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Step 2: Set up Xcode environment
+    # Step 2: List Directory Contents to verify path
+    - name: List Directory Contents
+      run: ls -R
+
+    # Step 3: Set up Xcode environment
     - name: Set up Xcode
       run: sudo xcode-select -s /Applications/Xcode_15.2.app
 
-    # Step 3: Build the iOS app for the simulator
+    # Step 4: Build the iOS app for the simulator
     - name: Build iOS App (Simulator)
       run: xcodebuild -project TestCI/TestCI.xcodeproj -scheme TestCI -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.0' build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY=""
 
-    # Step 4: Export the IPA file using the correct path to exportOptions.plist
+    # Step 5: Export the IPA file using the correct path to exportOptions.plist
     - name: Export IPA
       run: xcodebuild -exportArchive -archivePath $PWD/build/TestCI.xcarchive -exportOptionsPlist TestCI/exportOptions.plist -exportPath $PWD/build/
 
-    # Step 5: Install App Center CLI
+    # Step 6: Install App Center CLI
     - name: Install App Center CLI
       run: npm install -g appcenter-cli
 
-    # Step 6: Upload the IPA to App Center using the CLI
+    # Step 7: Upload the IPA to App Center using the CLI
     - name: Upload IPA to App Center
       run: appcenter distribute release \
             --app "Nackyr/TestCI" \
