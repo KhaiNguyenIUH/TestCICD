@@ -28,7 +28,7 @@ jobs:
 
     # Step 5: Upload the IPA to App Center
     - name: Upload IPA to App Center
-      uses: msftmobile/appcenter-upload-action@v1
+      uses: microsoft/appcenter-upload-action@v1
       with:
         appcenter_api_token: ${{ secrets.APPCENTER_API_TOKEN }} # Use the App Center token stored in GitHub Secrets
         owner_name: 'Nackyr'    # Replace with your App Center owner name
