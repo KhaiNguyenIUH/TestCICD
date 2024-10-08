@@ -28,7 +28,7 @@ jobs:
 
     # Step 5: Export the IPA file using the correct path to exportOptions.plist
     - name: Export IPA
-      run: xcodebuild -exportArchive -archivePath $PWD/build/TestCI.xcarchive -exportOptionsPlist TestCI/exportOptions.plist -exportPath $PWD/build/
+      run: xcodebuild -exportArchive -archivePath $PWD/build/TestCI.xcarchive -exportOptionsPlist TestCI/TestCI/exportOptions.plist -exportPath $PWD/build/
 
     # Step 6: Install App Center CLI
     - name: Install App Center CLI
