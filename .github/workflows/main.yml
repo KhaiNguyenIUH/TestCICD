@@ -21,11 +21,8 @@ jobs:
     # Step 3: Build the iOS app for the simulator
     - name: Build iOS App (Simulator)
       run: xcodebuild -project TestCI/TestCI.xcodeproj -scheme TestCI -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.0' build CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY=""
-    # # Step 3: Build the iOS app using the .xcodeproj file and allow provisioning updates
-    # - name: Build iOS App
-    #   run: xcodebuild -project TestCI/TestCI.xcodeproj -scheme TestCI -sdk iphoneos -configuration Release archive -archivePath $PWD/build/TestCI.xcarchive --allowProvisioningUpdates
 
-    # Step 4: Export the IPA file
+    # Step 4: Export the IPA file using the correct path to exportOptions.plist
     - name: Export IPA
       run: xcodebuild -exportArchive -archivePath $PWD/build/TestCI.xcarchive -exportOptionsPlist TestCI/exportOptions.plist -exportPath $PWD/build/
 
